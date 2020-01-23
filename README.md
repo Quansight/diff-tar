@@ -1,7 +1,7 @@
 Create differential tarballs
 ============================
 
-Note: this project is still experimental (tested against Python 3.8)
+Note: this project is still experimental (tested with Python 3.8)
 
 This tools allows you to create differential tarballs of a (usually
 mirrored) conda repository.  The resulting tarball can be used to update
