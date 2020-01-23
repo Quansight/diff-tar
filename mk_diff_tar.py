@@ -51,9 +51,16 @@ def write_reference(path):
     with open(path, 'w') as fo:
         fo.write(data)
 
+def read_reference():
+    path = 'reference.json'
+    try:
+        with open(path) as fi:
+            return json.load(fi)
+    except FileNotFoundError:
+        sys.exit('No such file: %s' % path)
+
 def get_updates():
-    with open('reference.json') as fi:
-        d1 = json.load(fi)
+    d1 = read_reference()
     d2 = all_repodata()
     result = []
     for repo_path, index2 in d2.items():
