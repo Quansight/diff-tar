@@ -118,21 +118,21 @@ def main():
 
     opts, args = p.parse_args()
 
+    if opts.version:
+        print(__version__)
+        return
+
     if len(args) != 1:
         p.error('exactly one argument is required, try -h')
 
     global mirror_dir
     mirror_dir = abspath(args[0])
     if not isdir(mirror_dir):
-        sys.exit("no such directory: %r" % mirror_dir)
+        sys.exit("No such directory: %r" % mirror_dir)
 
     if opts.verbose:
         global verbose
         verbose = True
-
-    if opts.version:
-        print(__version__)
-        return
 
     if opts.create:
         tar_repo()
