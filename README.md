@@ -1,7 +1,9 @@
 Create differential tarballs
 ============================
 
-Note: this project is still experimental (tested with Python 3.8)
+Note: This project is still experimental (tested with Python 3.8).
+The plan is to add the main functionality to conda-mirror, as
+options `--reference` and `--create-diff-tar`.
 
 This tools allows you to create differential tarballs of a (usually
 mirrored) conda repository.  The resulting tarball can be used to update
